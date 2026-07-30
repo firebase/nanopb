@@ -1,5 +1,8 @@
 name: spm
 
+permissions:
+  contents: read
+
 on:
   push:
   pull_request:
@@ -8,7 +11,7 @@ jobs:
   swift-build-run:
     runs-on: macOS-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
     - name: Build
       run: swift build
     - name: Run

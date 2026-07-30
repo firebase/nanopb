@@ -12,5 +12,3 @@ VERSION_ONLY=$(echo $1 | sed 's/nanopb-//')
 if [[ $1 != *dev ]]
 then sed -i -e 's/"version":\s*"[^"]*"/"version": "'$VERSION_ONLY'"/' library.json
 fi
-
-sed -i -e 's/version =.*/version = "'$VERSION_ONLY'"/' extra/poetry/pyproject.toml
